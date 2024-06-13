@@ -1,1 +1,2 @@
-venv-pdf-headers-gui/
+pdf-headers/
+__pycache__/

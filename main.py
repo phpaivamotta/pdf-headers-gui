@@ -1,6 +1,3 @@
-import fitz
-import roman
-
 from Document import Document
 from Report import Report
 from Attachment import Attachment
@@ -16,9 +13,9 @@ document_name = "MAS-233266-FPC-1016-501"
 
 # Variables for report
 footer_roman_start = 2 # Starting roman numeral page will always be 2, so this might be redundant
-footer_roman_finish = 6
-file_path_original_report = "/content/drive/MyDrive/PDF Headers/PDF wo Headers/MAS-243373-HAR-0321-0501 - Report_R0.pdf"
-file_path_modified_report = "/content/drive/MyDrive/PDF Headers/PDF w Headers/MAS-243373-HAR-0321-0501 - Report_R0.pdf"
+footer_roman_finish = 4
+file_path_original_report = r"C:\Users\phpai\OneDrive\Desktop\Report Files\Original Files\MAS-243373-HAR-0321-0501 - Report_R0.pdf"
+file_path_modified_report = r"C:\Users\phpai\OneDrive\Desktop\Report Files\Files with Headers\MAS-243373-HAR-0321-0501 - Report_R0.pdf"
 
 # Variable for attachments center header
 attachment_center_header_top_margin_decrease = 0 # This is to be used when the center header is interfering with the other header text. Default should be zero (0). Any positive value added will move center header up. Start with 5
@@ -26,14 +23,14 @@ attachment_center_header_top_margin_decrease = 0 # This is to be used when the c
 # Variables for attachment A
 attachment_letter_a = "A"
 has_cover_page_a = False
-file_path_original_attachment_a = "/content/drive/MyDrive/PDF Headers/PDF wo Headers/Attachment A - FEA Input Screenshots.pdf"
-file_path_modified_attachment_a = "/content/drive/MyDrive/PDF Headers/PDF w Headers/Attachment A - FEA Input Screenshots.pdf"
+file_path_original_attachment_a = r"C:\Users\phpai\OneDrive\Desktop\Report Files\Original Files\Attachment A - FEA Input Screenshots.pdf"
+file_path_modified_attachment_a = r"C:\Users\phpai\OneDrive\Desktop\Report Files\Files with Headers\Attachment A - FEA Input Screenshots.pdf"
 
-# Variables for attachment B
-attachment_letter_b = "B"
-has_cover_page_b = False
-file_path_original_attachment_b = "/content/drive/MyDrive/PDF Headers/PDF wo Headers/TEST 3266 Attachment B.pdf"
-file_path_modified_attachment_b = "/content/drive/MyDrive/PDF Headers/PDF w Headers/TEST 3266 Attachment B.pdf"
+# # Variables for attachment B
+# attachment_letter_b = "B"
+# has_cover_page_b = False
+# file_path_original_attachment_b = "/content/drive/MyDrive/PDF Headers/PDF wo Headers/TEST 3266 Attachment B.pdf"
+# file_path_modified_attachment_b = "/content/drive/MyDrive/PDF Headers/PDF w Headers/TEST 3266 Attachment B.pdf"
 
 # # Variables for attachment D
 # attachment_letter_d = "D"
@@ -94,21 +91,21 @@ attachment_a = Attachment(
 attachment_a.add_headers_and_footers()
 attachment_a.save_pdf()
 
-# Attachment B
-attachment_b = Attachment(
-    company_name=company_name,
-    project_name=project_name,
-    document_description=document_description,
-    date=date,
-    maverick=maverick,
-    document_name=document_name,
-    attachment_letter=attachment_letter_b,
-    file_path_original=file_path_original_attachment_b,
-    file_path_modified=file_path_modified_attachment_b,
-    has_cover_page=has_cover_page_b,
-    attachment_center_header_top_margin_decrease=attachment_center_header_top_margin_decrease
-)
+# # Attachment B
+# attachment_b = Attachment(
+#     company_name=company_name,
+#     project_name=project_name,
+#     document_description=document_description,
+#     date=date,
+#     maverick=maverick,
+#     document_name=document_name,
+#     attachment_letter=attachment_letter_b,
+#     file_path_original=file_path_original_attachment_b,
+#     file_path_modified=file_path_modified_attachment_b,
+#     has_cover_page=has_cover_page_b,
+#     attachment_center_header_top_margin_decrease=attachment_center_header_top_margin_decrease
+# )
 
-attachment_b.add_headers_and_footers()
-attachment_b.save_pdf()
+# attachment_b.add_headers_and_footers()
+# attachment_b.save_pdf()
 

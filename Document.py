@@ -1,8 +1,10 @@
+import fitz
+
 class Document:
 
     FONT_SIZE = 12
     FONT_NAME = "BA" # Stands for Book Antiqua, which is the default header font used by MAS
-    FONT_FILE = "/content/drive/MyDrive/PDF Headers/Book Antiqua Font Files/BKANT.TTF" # Font file for Book Antiqua
+    FONT_FILE = r"C:\Windows\Fonts\BKANT.TTF" # Font file for Book Antiqua
     FONT_COLOR = (0,0,0) # (0,0,0) is the color black
 
     # Default margins (margins seen below are in points, not inches. Where 1 in. = 72 points)
